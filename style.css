@@ -1,0 +1,134 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #171717;
+  background: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 6%;
+  border-bottom: 1px solid #ddd;
+}
+
+header h2 {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #171717;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 70px 6%;
+}
+
+.hero h1 {
+  max-width: 900px;
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 6vw, 76px);
+  font-weight: normal;
+  line-height: 1.05;
+}
+
+.hero p {
+  color: #666;
+  line-height: 1.7;
+}
+
+section {
+  padding: 40px 6%;
+}
+
+section h2 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.gallery p,
+.steps p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+#contact {
+  background: #f3f1ed;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+button {
+  background: #171717;
+  color: white;
+  padding: 14px 25px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
+}
+
+footer {
+  padding: 25px 6%;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+  .gallery,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: 230px;
+  }
+}
